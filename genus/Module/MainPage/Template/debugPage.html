@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debug Page</title>
+<link href="" rel="stylesheet" type="text/css" />
+
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+
+<!--
+<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+<link href="./css/bootstrap.css" rel="stylesheet">
+-->
+<style type="text/css">
+.breakWord
+{
+	word-wrap:break-word;
+}
+</style>
+	
+</script>
+</head>
+<body>
+
+<div class="container" style="width:1016px;">
+	{$tplHeader}
+	<div class="row">
+		<div class="span12">
+			<div class="row">
+				<div class="span4">
+					<div>
+						<strong>编号：</strong><span class="text-error">v001n001</span>
+					</div>
+					<div>&nbsp;</div>
+					<div>
+						<strong>状态：</strong><span class="text-error">active</span>
+					</div>
+					<div>&nbsp;</div>				
+					<div>
+						<strong>负责人：</strong><span class="text-error">Jack</span>
+					</div>
+				</div>
+				<div class="span4">
+					<div>
+						<strong>所属项目：</strong><span class="text-error">牛人网</span>
+					</div>
+					<div>&nbsp;</div>
+					<div>
+						<p class="warning"><strong>等级：</strong><span class="text-error">medium</span></p>
+					</div>
+					<div>&nbsp;</div>				
+					<div>
+						<p><strong>创建者：</strong><span class="text-error">Jim</span></p>
+					</div>
+				</div>
+				<div class="span4">
+					<div>&nbsp;</div>					
+					<div>&nbsp;</div>
+					<div>
+						<p><strong>类型：</strong><span class="text-error">ot</span></p>
+					</div>
+					<div>&nbsp;</div>
+					<div>
+						<strong>创建时间：</strong><span class="text-error">2013.07.12 15:00:00</span>
+					</div>
+					<div>&nbsp;</div>				
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12 breakWord">
+					<div>&nbsp;</div>
+					<div>
+						<strong>概要：</strong><br/><span>blablablabla...</span>
+					</div>
+					<div>&nbsp;</div>
+					<div>
+						<strong>详细：</strong><br/><span>blablabla...</span>
+					</div>
+					<div>&nbsp;</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="accordion" id="accordion-action">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle collapsed" data-parent="#accordion-action" data-toggle="collapse" href="#accordion-element-active">激活----将此BUG激活</a>
+						</div>
+						<div class="accordion-body collapse" id="accordion-element-active">
+							<div class="accordion-inner">
+								功能块
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle collapsed" data-parent="#accordion-action" data-toggle="collapse" href="#accordion-element-fix">修复----此BUG是否已修复</a>
+						</div>
+						<div class="accordion-body collapse" id="accordion-element-fix">
+							<div class="accordion-inner">
+								功能块...
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle collapsed" data-parent="#accordion-action" data-toggle="collapse" href="#accordion-element-appoint">指派----指派BUG负责人</a>
+						</div>
+						<div class="accordion-body collapse" id="accordion-element-appoint">
+							<div class="accordion-inner">
+								功能块...
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle collapsed" data-parent="#accordion-action" data-toggle="collapse" href="#accordion-element-confirm">确认----对此BUG是否修复进行确认</a>
+						</div>
+						<div class="accordion-body collapse" id="accordion-element-confirm">
+							<div class="accordion-inner">
+								功能块...
+							</div>
+						</div>
+					</div>
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle collapsed" data-parent="#accordion-action" data-toggle="collapse" href="#accordion-element-comment">评论----对此BUG进行评论</a>
+						</div>
+						<div class="accordion-body collapse" id="accordion-element-comment">
+							<form>
+								<div class="accordion-inner">
+									<textarea class="input-block-level" rows="3" placeholder="Please enter a comment"></textarea>
+									<input class="btn btn-info btn-large" type="submit" value="评论">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="accordion" id="action-content">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#">全部</a>
+						</li>
+						<li>
+							<a href="#">激活</a>
+						</li>
+						<li>
+							<a href="#">修复</a>
+						</li>
+						<li>
+							<a href="#">指派</a>
+						</li>
+						<li>
+							<a href="#">确认</a>
+						</li>
+						<li>
+							<a href="#">评论</a>
+						</li>
+						<li class="dropdown pull-right">
+							 <a href="#" data-toggle="dropdown" class="dropdown-toggle">排序<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">时间</a>
+								</li>
+								<li>
+									<a href="#">类型</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">更多设置</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+{$tplPopup}
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

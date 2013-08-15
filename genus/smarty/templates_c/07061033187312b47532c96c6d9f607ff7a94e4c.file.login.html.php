@@ -1,0 +1,291 @@
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-13 09:50:21
+         compiled from "D:\Program Files\wamp\www\genus\module\mainpage\template\login.html" */ ?>
+<?php /*%%SmartyHeaderCode:227955208a053e11132-39156954%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '07061033187312b47532c96c6d9f607ff7a94e4c' => 
+    array (
+      0 => 'D:\\Program Files\\wamp\\www\\genus\\module\\mainpage\\template\\login.html',
+      1 => 1376386619,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '227955208a053e11132-39156954',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5208a053e4e1c2_31174511',
+  'variables' => 
+  array (
+    'modulePath' => 0,
+    'loginfo' => 0,
+    'errorinfo' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5208a053e4e1c2_31174511')) {function content_5208a053e4e1c2_31174511($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=" http://www.w3.org/1999/xhtml" >
+<!--<!DOCTYPE html>-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>牛人网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="<?php echo $_smarty_tpl->tpl_vars['modulePath']->value;?>
+/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      font.a{ font-family : "Microsoft YaHei", Georgia, Serif } <!--调整字体-->
+
+      //验证码相关代码（起始）
+      
+      .code
+      {
+        background-image:url(../test2/code.jpg);
+        font-family:Arial;
+        font-style:italic;
+        color:Red;
+        border:0;
+        padding:2px 3px;
+        letter-spacing:3px;
+        font-weight:bolder;
+      }
+      .unchanged
+      {
+        border:0;
+      }
+    </style>
+    <script language="javascript" type="text/javascript">
+
+      var code ; //在全局 定义验证码
+      function createCode()
+      { 
+        code = "";
+        var codeLength = 6;//验证码的长度
+        var checkCode = document.getElementById("checkCode");
+        var selectChar = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');// 所有候选组成验证码的字符，当然也可以用中文的
+
+        for(var i=0;i<codeLength;i++)
+        {
+          var charIndex = Math.floor(Math.random()*36);
+          code +=selectChar[charIndex];
+        }
+        // alert(code);
+        if(checkCode)
+        {
+          checkCode.className="code";
+          checkCode.value = code;
+        }
+
+      }
+
+	function checklogin()
+	{
+		var mail = document.getElementById("email").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	      
+	    if (filter.test(mail)) 
+		    return true;
+	    else  
+		{
+	    	alert(' 您的电子邮箱格式不正确');
+	        return false;
+	    }
+	    var pwd = document.getElementById("password").value;
+	    if(pwd.length<6)
+	    {
+		    alert("密码长度太短");		
+			return false;
+	    }
+	    return true;
+	}
+
+	function checkregister()
+	{
+		if(!ismail())
+		{
+			alert("issmall");
+			return false;
+		}
+		if(!validate())
+		{
+			alert("validate");
+			return false;
+		}
+		if(!ispsw())
+		{
+			alert("ispsw");
+			return false;
+		}
+		return true;
+	}
+            
+    function validate ()  
+    {
+      var inputCode = document.getElementById("input1").value;
+      if(inputCode.length <=0)
+      {
+        alert("请输入验证码！");
+        return false;
+      }
+      else if(inputCode != code )
+      {
+        alert("验证码输入错误！区分大小写");
+        createCode();//刷新验证码
+        return false;
+      }
+      return true;
+    }
+
+      //验证码相关代码（结束）
+
+    function ismail()   //验证电子邮箱地址格式是否正确的函数
+    {
+      var mail = document.getElementById("inputEmail").value;
+      var filter = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+      
+      if (filter.test(mail)) return true;
+      else  {
+              alert(' 您的电子邮箱格式不正确');
+              return false;
+            }
+    }
+
+    function ispsw()  //验证两次输入的密码是否一致
+    {
+        var ps1 = document.getElementById("inputPassword").value;
+        var ps2 = document.getElementById("inputPassword2").value;
+
+    	if(ps1.length < 6)
+        	alert("密码长度太短！");
+        
+        if(ps1 != ps2)
+        {
+          alert("密码输入不一致！");
+          return false;
+        }
+        else
+        {
+          return true;
+        }
+      }
+
+    </script>
+    <link href="<?php echo $_smarty_tpl->tpl_vars['modulePath']->value;?>
+/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+  </head>
+
+  <body onload="createCode()">
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+      <a href="#" class="brand"><font class="a" color="white">牛人网</font></a>
+        <form class="form-inline nav pull-right" method="post" action="http://localhost/genus/index.php/mainpage/login" onSubmit="return checklogin()">
+
+          <!--这里输入的是电子邮箱地址和密码-->
+          <!--将其与数据库对应条目进行比对-->
+          <input id="email" type="text" name="email" class="input-small" placeholder="电子邮箱" style="width:150px"></input>  <!--调整文本框长度-->
+          <input id="password" type="password" name="password" class="input-small" placeholder="密码" style="width:150px"></input>
+          <label class="checkbox">
+          <input type="checkbox" value="auto" name="type"><font class="a" color="white">下次自动登录</font>
+          </label>
+        <input type="submit" value="登录" class="btn btn-primary"><font class="a" color="white"></font></input>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span1">
+        </div>
+        <div class="span6"><?php echo $_smarty_tpl->tpl_vars['loginfo']->value;?>
+ <?php echo $_smarty_tpl->tpl_vars['errorinfo']->value;?>
+
+        <div class="pull-right" style="width:1px;height:500px;background: #000;"></div>  <!--用来画竖线-->
+        </div>
+        <div class="span3">
+
+        <!--将下列信息存入数据库，包括邮箱地址和密码-->
+        <h3>注册：</h3>
+        <br/>
+          <!--
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#">个人</a></li>
+            <li><a href="#">企业</a></li>
+          </ul>
+          -->
+        <form method="post" action="http://localhost/genus/index.php/mainpage/register" onSubmit="return checkregister()">
+        
+        <div class="control-group">
+           <label class="control-label" for="choosestatus">您是</label>
+          <div class="controls">
+            <input type="radio" name="type" value="person" /> 个人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="type" value="company" /> 公司
+          </div>
+          <br/>
+           <label class="control-label" for="inputEmail" name="email">邮箱</label>
+          <div class="controls">
+            <input id="inputEmail" type="text" class="input-block-level" name="email" onchange="ismail();" />
+          </div>
+        </div>
+        <div class="control-group">
+           <label class="control-label" for="inputPassword">密码</label>
+          <div class="controls">
+            <input id="inputPassword" type="password" name="password" class="input-block-level"/>  <!--使用class="input-block-level"填充整个父级对象-->
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">密码确认</label>
+          <div class="controls">
+            <input id="inputPassword2" type="password" class="input-block-level" onchange="ispsw();" />
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">验证码</label>
+          <div class="controls">
+          <div class="row-fluid">
+            <div class="span8">
+              <input type="text" id="input1" class="input-block-level" onchange="validate();" />
+            </div>
+            <div class="span4">
+              <input type="text" onclick="createCode()" readonly="readonly" id="checkCode" class="unchanged" style="width: 80px"/><br/>
+            </div>
+          </div>
+          <!--<input class="btn btn-primary pull-right" id="Button1" onclick="validate();" type="button" value="确定" /> -->
+          </div>
+        </div>
+        <input type="submit" value="注册" class="btn btn-primary btn-large pull-right" ></input>
+        </form>
+        
+        </div>
+        <div class="span2">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Le javascript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="<?php echo $_smarty_tpl->tpl_vars['modulePath']->value;?>
+/js/bootstrap.min.js"></script>
+
+  </body>
+</html><?php }} ?>

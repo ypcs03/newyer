@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>牛人网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{$modulePath}/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      font.a{font-family: "Microsoft YaHei",Georgia,Serif} <!--调整字体-->
+    </style>
+    <link href="{$modulePath}/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#"><font class="a" >牛人网</font></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li ><a href="mainpage.html"><font class="a" >个人首页</font></a></li>
+              <li class="active"><a href="mainpage2.html"><font class="a" >个人主页</font></a></li>
+              <li><a href="#"><font class="a" >好友</font></a></li>
+              <!--<li><a href="#"><font class="a" >职业圈</font></a></li>-->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font class="a" >职业圈 </font><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><font class="a" >华中科技大学</font></a></li>
+                  <li><a href="#"><font class="a" >IT圈</font></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><font class="a" >我管理的圈子</font></a></li>
+                  <li><a href="#"><font class="a" >创建新圈子</font></a></li>
+                </ul>
+              </li>
+              <li><a href="#"><font class="a" >谁是牛人</font></a></li>
+              <!--<li><a href="#"><font class="a" >校园招聘</font></a></li>-->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font class="a" >校园招聘 </font><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><font class="a" >找工作</font></a></li>
+                  <li><a href="#"><font class="a" >找实习</font></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><font class="a" >我的简历</font></a></li>
+                  <li><a href="#"><font class="a" >简历投递反馈</font></a></li>
+                </ul>
+              </li>
+              <li><a href="#"><font class="a" >公司</font></a></li>
+              <li><a href="#"><font class="a" >问答</font></a></li>
+              <li><a href="#"><font class="a" >推荐阅读</font></a></li>
+            </ul>
+            <ul class="nav pull-right">
+                <li>
+                  <a href="#"><font class="a" >通知</font></a>
+                </li>
+                <li>
+                  <a href="#"><font class="a" >站内信</font></a>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><font class="a" >个人设置 </font><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><font class="a" >账号设置</font></a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><font class="a" >退出</font></a></li>
+                </ul>
+                </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container"><!--有这个container的div在，就可以保证剩下的元素都处在导航栏的文字区间之内-->
+      <div class="container-fluid"> 
+          <div class="row-fluid">
+            <div class="span1">
+            </div>
+            <div class="span2">
+              <img width="140" height="140" src="http://www.bootcss.com/p/layoutit/img/a.jpg"/>
+              <br/>
+              <br/>
+              <a href="#">上传新头像</a>
+              <br/>
+              <a href="#">修改个人信息</a>
+            </div>
+            <div class="span3">
+
+              <!--这里需要读出用户的用户名-->
+              <h3>用户名</h3>
+              <dl>
+                <dt>
+                  <!--这里需要读出用户的牛人等级，下面的以此类推-->
+                  <font style="font-size:20px">牛人等级</font>
+                </dt>
+                <dd>
+                  IT民工 <!--牛人等级-->
+                </dd>
+                <dt>
+                  <font style="font-size:20px">牛人积分</font>
+                </dt>
+                <dd>
+                  200  <!--牛人积分-->
+                </dd>
+              </dl>
+            </div>
+            <div class="span3">
+            <dl>
+              <dt>
+                <font style="font-size:20px">大学&专业</font>
+              </dt>
+              <dd>
+                华中科大&nbsp;&nbsp;|&nbsp;&nbsp;信息安全
+              </dd>
+              <dt>
+                <font style="font-size:20px">学历&城市</font>
+              </dt>
+              <dd>
+                本科&nbsp;&nbsp;|&nbsp;&nbsp;武汉
+              </dd>
+              <dt>
+                <font style="font-size:20px">年级&类别</font>
+              </dt>
+              <dd>
+                大三&nbsp;&nbsp;|&nbsp;&nbsp;实习生
+              </dd>
+            </dl>
+            </div>
+            <div class="span2">
+            <table frame="box">
+
+            <!--读出最近访问该用户的个人或公司的头像链接-->
+            <caption>最近来访&nbsp;(2000)&nbsp;<a href="#">&nbsp;&nbsp;更多</a></caption>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            </table>
+            </div>
+            <div class="span1">
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span1">
+            </div>
+            <div class="span8">
+            <br/>
+            
+
+            <!--这里需要读出他人对用户的评价，包括名字、内容和时间-->
+            <h3>好友评价：</h3>
+            <table class="table table-hover"> <!--最多只显示三条最新好友评价记录-->
+            <tbody>
+              <tr>
+                <td>张三&nbsp;&nbsp;评价你：</td>
+                <td>你是个好人</td>
+                <td>08/09/2013</td>
+                <td><a href="http://www.baidu.com">删除</a></td>
+              </tr>
+              <tr>
+                <td>张三&nbsp;&nbsp;评价你：</td>
+                <td>你是个好人</td>
+                <td>08/09/2013</td>
+                <td><a href="#">删除</a></td>
+              </tr>
+              <tr>
+                <td>张三&nbsp;&nbsp;评价你：</td>
+                <td>你是个好人</td>
+                <td>08/09/2013</td>
+                <td><a href="#">删除</a></td>
+              </tr>
+            </tbody>
+            </table>
+
+            <!--将评价存入数据库-->
+            <textarea class="input-block-level" rows="3" placeholder="添加评价"></textarea>
+            <div class="row-fluid">
+              <div class="span2">
+              <label class="checkbox">
+                <input type="checkbox"> 是否分享
+              </label>
+              </div>
+              <div class="span8">
+              </div>
+              <div class="span2">
+              <button class="btn btn-primary btn-block" type="button">发布</button>
+              </div>
+            </div>
+
+
+            <h3>个人动态：</h3>
+            <hr/>
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="row-fluid">
+                  <div class="span12">
+                    <div class="row-fluid">
+                      <div class="span2">
+
+                        <!--这里需要读出用户发布的状态信息，包括头像、姓名、状态内容和时间-->
+                        <!--这里需要读出回复用户发布的状态信息，包括头像、姓名、状态内容和时间-->
+                        <!--下面是举得例子-->
+                        <img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/>
+                        <br/>
+                        <img width="30" height="30" src="http://hdn.xnimg.cn/photos/hdn121/20130806/2240/h_tiny_mMAp_4b14000000e0111a.jpg"/>
+                      </div>
+                      <br/>
+                      <div class="span2">
+                        <font style="font-size:14px">张三：</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">李四回复张三：</font>
+                      </div>
+                      <div class="span4">
+                        <font style="font-size:14px">我是中国人。</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">我也是中国人。</font>
+                      </div>
+                      <div class="span2">
+                        <font style="font-size:14px">08/09/2013</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">08/09/2013</font>
+                      </div>
+                      <div class="span2">
+                        <a href="#"><font style="font-size:14px">删除</font></a>
+                        <br/>
+                        <br/>
+                        <a href="#"><font style="font-size:12px">删除</font></a>
+                      </div>
+                      <p>&nbsp;</p>
+
+                      <!--将评价存入数据库-->
+                      <textarea class="input-block-level" rows="3" placeholder="添加回复"></textarea>
+                        <div class="row-fluid">
+                          <div class="span2">
+                            <label class="checkbox">
+                              <input type="checkbox"> 是否分享
+                            </label>
+                          </div>
+                          <div class="span8">
+                          </div>
+                          <div class="span2">
+                            <button class="btn btn-primary btn-block" type="button">发布</button>   
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div><!--这是单个动态板块的末尾-->
+                <br/>
+
+
+                <div class="row-fluid">
+                  <div class="span12">
+                    <div class="row-fluid">
+                      <div class="span2">
+
+                        <!--这里与上面相同-->
+                        <img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/>
+                        <br/>
+                        <img width="30" height="30" src="http://hdn.xnimg.cn/photos/hdn121/20130806/2240/h_tiny_mMAp_4b14000000e0111a.jpg"/>
+                      </div>
+                      <br/>
+                      <div class="span2">
+                        <font style="font-size:14px">张三：</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">李四回复张三：</font>
+                      </div>
+                      <div class="span4">
+                        <font style="font-size:14px">我是中国人。</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">我也是中国人。</font>
+                      </div>
+                      <div class="span2">
+                        <font style="font-size:14px">08/09/2013</font>
+                        <br/>
+                        <br/>
+                        <font style="font-size:12px">08/09/2013</font>
+                      </div>
+                      <div class="span2">
+                        <a href="#"><font style="font-size:14px">删除</font></a>
+                        <br/>
+                        <br/>
+                        <a href="#"><font style="font-size:12px">删除</font></a>
+                      </div>
+                      <p>&nbsp;</p>
+
+                      <!--这里与上面相同-->
+                      <textarea class="input-block-level" rows="3" placeholder="添加回复"></textarea>
+                        <div class="row-fluid">
+                          <div class="span2">
+                            <label class="checkbox">
+                              <input type="checkbox"> 是否分享
+                            </label>
+                          </div>
+                          <div class="span8">
+                          </div>
+                          <div class="span2">
+                            <button class="btn btn-primary btn-block" type="button">发布</button>   
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div><!--这是单个动态板块的末尾-->
+                <br/>
+                <button class="btn btn-large btn-block btn-primary" type="button">查看更多个人动态</button> 
+              </div>
+            </div><!--这是个人动态板块的末尾-->
+
+
+            <!--这里将相应的条目从数据库中读出即可-->
+            <h3>联系方式：</h3>
+            <hr/>
+            <dl>
+              <dt>手机：</dt>
+              <dd>1234567890x</dd>
+              <dt>QQ：</dt>
+              <dd>123456789</dd>
+              <dt>邮箱：</dt>
+              <dd>zhongguoren@163.com</dd>
+            </dl>
+            <div class="row-fluid">
+              <div class="span10">
+              </div>
+              <div class="span2">
+                <button class="btn btn-primary btn-block" type="button">编辑</button>   
+                <!--编辑完成后写入数据库-->
+              </div>
+            </div>
+            </div><!--这是span10的末尾-->
+            <div class="span2">
+            <table frame="box">
+
+            <!--这里需要读出用户好友的头像链接-->
+            <!--下面的与此类似-->
+            <caption>好友&nbsp;(2000)&nbsp;<a href="#">&nbsp;&nbsp;更多</a></caption>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            </table>
+            <br/>
+            <table frame="box">
+            <caption>公司&nbsp;(2000)&nbsp;<a href="#">&nbsp;&nbsp;更多</a></caption>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            </table>
+            <br/>
+            <table frame="box">
+            <caption>职业圈&nbsp;(2000)&nbsp;<a href="#">&nbsp;&nbsp;更多</a></caption>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+              <td><a href="#"><img width="50" height="50" src="http://hdn.xnimg.cn/photos/hdn321/20130731/2210/tiny_URfQ_f91b0005e5b8111a.jpg"/></a></td>
+            </tr>
+            </table>
+            <br/>
+            <p>当前在做的项目&nbsp;&nbsp;<a href="#">&nbsp;&nbsp;全部</a></p>
+            <ol>
+              <li><a href="#">四个现代化</a></li>
+              <li><a href="#">四个现代化</a></li>
+              <li><a href="#">四个现代化</a></li>
+            </ol>
+            <br/>
+            <p>过往完成的项目&nbsp;&nbsp;<a href="#">&nbsp;&nbsp;全部</a></p>
+            <ol>
+              <li><a href="#">四个现代化</a></li>
+              <li><a href="#">四个现代化</a></li>
+              <li><a href="#">四个现代化</a></li>
+            </ol>
+            </div>
+            <div class="span1">
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{$modulePath}/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MysqlInfo>
+	<sEngine>mysql</sEngine>
+	<sHost>127.0.0.1</sHost>
+	<sDatabase>bugsystemdb</sDatabase>
+	<sUser>root</sUser>
+	<sPassWord></sPassWord>
+	<sCode>utf8</sCode>
+	<sOption></sOption>
+</MysqlInfo>

@@ -1,0 +1,58 @@
+<div id="nav" class="span4 row-fluid clearfix">
+	<div class="view">
+		<ul class="unstyled inline">
+		  <li class="span8">总项目数：1</li>
+		  <li class="span4"><a id="createproj_btn" href="#createproj_box" role="button"  data-toggle="modal">创建项目</a></li>
+		</ul>
+	</div>
+	<div id="url" class="view"><!--此处id属性的url是要通过get拿BugList的url-->
+	<div></div>
+		<div class="label label-info label-large span12">
+		  <div class="span3">标题</div>
+		  <div class="span3">负责人</div>
+		  <div class="span6">创建时间</div>
+		</div>
+		{foreach $projectList as $project}	
+		<div class="label span12 clProList" proId="" isClicked="0"><!--通过GET上传的参数名字是proId-->		
+		  <div class="span3">{$project.name}</div>
+		  <div class="span3">{$project.incharge}</div>
+		  <div class="span6">{$project.time}</div>
+		</div>		
+		{/foreach}
+	</div>
+	<div class="pagination pagination-centered">
+		<ul>
+			{if $begin==1}
+				<li class="disabled">
+					<a href="#">上一页</a>
+				</li>
+			{else}
+				<li>
+					<a href="#">上一页</a>
+				</li>
+			{/if}
+			{for $index=$begin to $end}
+			
+				{if $index==$indexSelect}
+					<li>
+						<a href="#" style="color:red;">{$index}</a>
+					</li>
+				{else}
+					<li>
+						<a href="#">{$index}</a>
+					</li>
+				{/if}
+			
+			{/for}
+			{if $end==$max}
+				<li class="disabled">
+					<a href="#">下一页</a>
+				</li>
+			{else}
+				<li>
+					<a href="#">下一页</a>
+				</li>
+			{/if}
+		</ul>
+	</div>
+</div>

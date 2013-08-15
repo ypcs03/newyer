@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="gb2312">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>QA System</title>
+
+	<!-- Le styles -->
+    <link href="{$modulePath}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      body {
+        padding:0;
+      }
+    </style>
+    <link href="{$modulePath}/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+
+    
+ </head>
+
+ <body>
+ <div class="container">
+	{$tplHeader}
+	<div class="view">
+		<div class="row-fluid clearfix">
+			{$tplProjectList}
+			{$tplProjectBugList}
+		</div>
+	</div>
+	{$tplFooter}
+</div>
+{$tplPopup}
+ 	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <script src="{$modulePath}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{$modulePath}/js/main.js"></script>
+ </body>
+</html>
